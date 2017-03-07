@@ -25,7 +25,7 @@ public class Controls {
 
     // Bias on a per seed basis -> changing the bias of the "1 seed" row will effect all four 1 seed teams
     // A bias of 1 = 1% increase in percentage to win a given matchup.
-    public static List<Double> bias = Arrays.asList(
+    public static ArrayList<Double> bias = new ArrayList<Double>(Arrays.asList(
                                     0.0, //1 seeds
                                     0.0, //2 seeds
                                     0.0, //3 seeds
@@ -42,7 +42,7 @@ public class Controls {
                                     0.0, //14 seeds
                                     0.0, //15 seeds
                                     0.0 //16 seeds
-                                    );
+                                    ));
 
     // Decays the global bias as the tournament progresses
     // See Calculations file for more on bias decay
@@ -58,7 +58,7 @@ public class Controls {
      *
      * Could use a file read in here... but for readability, just placing it all here
      */
-    public static List<Double> oneSeed = Arrays.asList(52.80, 60.60, 68.60, 84.00, 68.80, 83.30, 80.50, 90.40, 85.70, 50.00, 100.00, 100.00, 0.00, 0.00, 100.00);
+    public static List<Double> oneSeed = Arrays.asList(50.00, 52.80, 60.60, 68.60, 84.00, 68.80, 83.30, 80.50, 90.40, 85.70, 50.00, 100.00, 100.00, 0.00, 0.00, 100.00);
     public static List<Double> twoSeed = Arrays.asList(47.20, 50.00, 62.30, 44.40, 20.00, 72.20, 72.20, 44.40, 50.00, 60.00, 92.90, 100.00, 0.00, 0.00, 93.80, 0.00);
     public static List<Double> threeSeed = Arrays.asList(39.40, 37.70, 50.00, 62.50, 50.00, 54.80, 60.00, 100.00, 100.00, 69.20, 70.80, 0.00, 0.00, 83.60, 100.00, 0.00);
     public static List<Double> fourSeed = Arrays.asList(31.40, 55.60, 37.50, 50.00, 55.10, 33.30, 40.00, 30.00, 66.70, 100.00, 0.00, 68.40, 80.30, 0.00, 0.00, 0.00);
@@ -76,7 +76,7 @@ public class Controls {
     public static List<Double> sixteenSeed = Arrays.asList(0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00);
 
     // Contains the above matchups in a 17x17 grid (one buffer column for convenience)
-    public static HashMap<Integer, List<Double>> matchupGrid;
+    public static HashMap<Integer, ArrayList<Double>> matchupGrid;
 
 
 
