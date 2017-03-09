@@ -1,3 +1,5 @@
+package MarchMadness;
+
 import java.util.*;
 
 /**
@@ -77,28 +79,5 @@ public class Controls {
 
     // Contains the above matchups in a 17x17 grid (one buffer column for convenience)
     public static HashMap<Integer, ArrayList<Double>> matchupGrid;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

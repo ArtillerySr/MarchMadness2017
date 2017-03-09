@@ -1,3 +1,5 @@
+package MarchMadness;
+
 /**
  * Created by Nick on 3/5/2017.
  */
@@ -13,7 +15,6 @@ public class Main {
         }
         Utilities.normalizeMap(Controls.matchupGrid);
         Utilities.normalizeList(Controls.bias);
-
-        System.out.println(Controls.matchupGrid.get(1).get(16));
+        //System.out.println(Controls.matchupGrid.get(1).get(16));
     }
 }
