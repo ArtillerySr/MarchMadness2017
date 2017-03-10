@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * Created by Nick on 3/7/2017.
  */
-public abstract class Teams {
+public class Teams {
     public enum Region {
         SOUTH,
         WEST,
@@ -15,7 +15,7 @@ public abstract class Teams {
         MIDWEST
     }
 
-    public HashMap<Region, ArrayList<Team>> bracket;
+    public Teams() {}
 
     // Teams are structured such that variables can be accessed quickly and set as needed
     // To change an individual team's stats
@@ -48,9 +48,8 @@ public abstract class Teams {
         }
     }
 
-    protected abstract ArrayList<Team> buildRegion();
-
-    public void buildBracket(){
+    public HashMap<Region, ArrayList<Team>> buildBracket(){
+        HashMap<Region, ArrayList<Team>> bracket = new HashMap<>();
         South s = new South();
         West w = new West();
         East e = new East();
@@ -61,19 +60,21 @@ public abstract class Teams {
         bracket.put(Region.EAST, e.buildRegion());
         bracket.put(Region.MIDWEST, mw.buildRegion());
 
+        bracket = normalizeBracket(bracket);
         bracket = sortBracket(bracket);
+        return bracket;
     }
 
     /**
      * Finds a Team entry based on a given name. Only use after bracket is formed
      */
-    public Team getTeamByRegion(Region r, String name){
-         return findTeam(bracket.get(r), name, -1);
+    public Team getTeamByRegion(ArrayList<Team> region, String name){
+         return findTeam(region, name, -1);
     }
 
 
-    public Team getTeamByRegion(Region r, int seed){
-        return findTeam(bracket.get(r), null, seed);
+    public Team getTeamByRegion(ArrayList<Team> region, int seed){
+        return findTeam(region, null, seed);
     }
 
     public Team findTeam(ArrayList<Team> region, String name, int seed) {
@@ -119,4 +120,21 @@ public abstract class Teams {
         Collections.sort(region);
         return region;
     }
+
+    /**
+     * Adds a buffer seed to each region for easier sorting into matchups. 1 = 1 seed instead of 0
+     */
+    public HashMap<Region, ArrayList<Team>> normalizeBracket(HashMap<Region, ArrayList<Team>> map) {
+        HashMap<Region, ArrayList<Team>> result = new HashMap<>();
+        for(Map.Entry<Region, ArrayList<Team>> entry : map.entrySet()) {
+            result.put(entry.getKey(), normalizeRegion(entry.getValue()));
+        }
+        return result;
+    }
+
+    public ArrayList<Team> normalizeRegion(ArrayList<Team> region) {
+        region.add(0, new Team(null, "NULL", -1, 0, 0));
+        return region;
+    }
+
 }
