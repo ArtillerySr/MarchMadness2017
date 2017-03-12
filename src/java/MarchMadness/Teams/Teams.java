@@ -9,10 +9,10 @@ import java.util.*;
  */
 public class Teams {
     public enum Region {
-        SOUTH,
-        WEST,
         EAST,
-        MIDWEST
+        WEST,
+        MIDWEST,
+        SOUTH
     }
 
     public Teams() {}
@@ -50,15 +50,15 @@ public class Teams {
 
     public HashMap<Region, ArrayList<Team>> buildBracket(){
         HashMap<Region, ArrayList<Team>> bracket = new HashMap<>();
-        South s = new South();
-        West w = new West();
         East e = new East();
+        West w = new West();
         Midwest mw = new Midwest();
+        South s = new South();
 
-        bracket.put(Region.SOUTH, s.buildRegion());
-        bracket.put(Region.WEST, w.buildRegion());
         bracket.put(Region.EAST, e.buildRegion());
+        bracket.put(Region.WEST, w.buildRegion());
         bracket.put(Region.MIDWEST, mw.buildRegion());
+        bracket.put(Region.SOUTH, s.buildRegion());
 
         bracket = normalizeBracket(bracket);
         bracket = sortBracket(bracket);

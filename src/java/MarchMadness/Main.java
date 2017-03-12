@@ -24,5 +24,6 @@ public class Main {
         Bracket.BracketContainer bracket = b.getBracket();
 
         TextBasedDisplay.display(bracket);
+        //GraphicsBasedDisplay.display();
     }
 }

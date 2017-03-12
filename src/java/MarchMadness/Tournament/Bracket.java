@@ -105,8 +105,8 @@ public class Bracket {
      * Calculates the winners of the final four that move to the finals
      */
     private Matchup playFinalFour(HashMap<Region, Team> map, int round){
-        Team w1 = Calculate.calculateMatchupWinner(new Matchup(map.get(Region.SOUTH), map.get(Region.WEST)), round).winner;
-        Team w2 = Calculate.calculateMatchupWinner(new Matchup(map.get(Region.EAST), map.get(Region.MIDWEST)), round).winner;
+        Team w1 = Calculate.calculateMatchupWinner(new Matchup(map.get(Region.EAST), map.get(Region.WEST)), round).winner;
+        Team w2 = Calculate.calculateMatchupWinner(new Matchup(map.get(Region.MIDWEST), map.get(Region.SOUTH)), round).winner;
         return new Matchup(w1, w2);
     }
 
@@ -114,7 +114,6 @@ public class Bracket {
      * Calculates the winners of the tournament
      */
     private Team playFinals(Matchup matchup, int round) {
-
         return Calculate.calculateMatchupWinner(matchup, round).winner;
     }
 

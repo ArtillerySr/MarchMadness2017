@@ -9,10 +9,10 @@ import MarchMadness.Teams.Teams.*;
 public class TextBasedDisplay {
 
     public static void display(Bracket.BracketContainer bracket) {
-        printRegion(bracket, Region.SOUTH);
-        printRegion(bracket, Region.WEST);
         printRegion(bracket, Region.EAST);
+        printRegion(bracket, Region.WEST);
         printRegion(bracket, Region.MIDWEST);
+        printRegion(bracket, Region.SOUTH);
 
         printFinals(bracket);
     }
@@ -41,14 +41,14 @@ public class TextBasedDisplay {
 
     private static void printFinals(Bracket.BracketContainer bracket) {
         print("------ " + "FINALS" + " ------", 0);
-        print(bracket.roundOf4.get(Region.SOUTH).toString(), 0);
+        print(bracket.roundOf4.get(Region.EAST).toString(), 0);
         print(bracket.roundOf4.get(Region.WEST).toString(), 0);
 
         print(bracket.roundOf2.toString(), 1);
         print(bracket.winner.toString(), 2);
 
-        print(bracket.roundOf4.get(Region.EAST).toString(), 0);
         print(bracket.roundOf4.get(Region.MIDWEST).toString(), 0);
+        print(bracket.roundOf4.get(Region.SOUTH).toString(), 0);
     }
 
 

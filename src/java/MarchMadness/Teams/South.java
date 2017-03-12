@@ -28,7 +28,7 @@ public class South extends Teams {
      */
     Team oneSeed = new Team(
             REGION,
-            "",
+            "N. Carolina",
             1,
             getBiasBySeed(1),
             getBiasDecay()
@@ -36,7 +36,7 @@ public class South extends Teams {
 
     Team twoSeed = new Team(
             REGION,
-            "",
+            "Kentucky",
             2,
             getBiasBySeed(2),
             getBiasDecay()
@@ -44,7 +44,7 @@ public class South extends Teams {
 
     Team threeSeed = new Team(
             REGION,
-            "",
+            "UCLA",
             3,
             getBiasBySeed(3),
             getBiasDecay()
@@ -52,7 +52,7 @@ public class South extends Teams {
 
     Team fourSeed = new Team(
             REGION,
-            "",
+            "Butler",
             4,
             getBiasBySeed(4),
             getBiasDecay()
@@ -60,7 +60,7 @@ public class South extends Teams {
 
     Team fiveSeed = new Team(
             REGION,
-            "",
+            "Minnesota",
             5,
             getBiasBySeed(5),
             getBiasDecay()
@@ -68,7 +68,7 @@ public class South extends Teams {
 
     Team sixSeed = new Team(
             REGION,
-            "",
+            "Cincinnati",
             6,
             getBiasBySeed(6),
             getBiasDecay()
@@ -76,7 +76,7 @@ public class South extends Teams {
 
     Team sevenSeed = new Team(
             REGION,
-            "",
+            "Dayton",
             7,
             getBiasBySeed(7),
             getBiasDecay()
@@ -84,7 +84,7 @@ public class South extends Teams {
 
     Team eightSeed = new Team(
             REGION,
-            "",
+            "Arkansas",
             8,
             getBiasBySeed(8),
             getBiasDecay()
@@ -92,7 +92,7 @@ public class South extends Teams {
 
     Team nineSeed = new Team(
             REGION,
-            "",
+            "Seton Hall",
             9,
             getBiasBySeed(9),
             getBiasDecay()
@@ -100,7 +100,7 @@ public class South extends Teams {
 
     Team tenSeed = new Team(
             REGION,
-            "",
+            "Wichita St.",
             10,
             getBiasBySeed(10),
             getBiasDecay()
@@ -108,7 +108,7 @@ public class South extends Teams {
 
     Team elevenSeed = new Team(
             REGION,
-            "",
+            "KSTATE/WF",
             11,
             getBiasBySeed(11),
             getBiasDecay()
@@ -116,7 +116,7 @@ public class South extends Teams {
 
     Team twelveSeed = new Team(
             REGION,
-            "",
+            "Middle Tenn.",
             12,
             getBiasBySeed(12),
             getBiasDecay()
@@ -124,7 +124,7 @@ public class South extends Teams {
 
     Team thirteenSeed = new Team(
             REGION,
-            "",
+            "Winthrop",
             13,
             getBiasBySeed(13),
             getBiasDecay()
@@ -132,7 +132,7 @@ public class South extends Teams {
 
     Team fourteenSeed = new Team(
             REGION,
-            "",
+            "Kent St.",
             14,
             getBiasBySeed(14),
             getBiasDecay()
@@ -140,7 +140,7 @@ public class South extends Teams {
 
     Team fifteenSeed = new Team(
             REGION,
-            "",
+            "N. Kentucky",
             15,
             getBiasBySeed(15),
             getBiasDecay()
@@ -148,7 +148,7 @@ public class South extends Teams {
 
     Team sixteenSeed = new Team(
             REGION,
-            "",
+            "Texas So.",
             16,
             getBiasBySeed(16),
             getBiasDecay()
