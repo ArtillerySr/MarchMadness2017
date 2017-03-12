@@ -19,6 +19,6 @@ public class Main {
         Utilities.normalizeList(Controls.bias);
         //System.out.println(Controls.matchupGrid.get(1).get(16));
 
-        Bracket b = new Bracket();
+        new Bracket();
     }
 }

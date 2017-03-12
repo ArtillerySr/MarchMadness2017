@@ -13,13 +13,18 @@ public class Matchups {
     /**
      * Used to simplify how brackets are calculated
      */
-    public class Matchup {
+    public static class Matchup {
         public Team t1;
         public Team t2;
+        public Team winner;
 
         public Matchup(Team t1, Team t2) {
             this.t1 = t1;
             this.t2 = t2;
+        }
+
+        public void setWinner(Team winner){
+            this.winner = winner;
         }
 
         @Override
