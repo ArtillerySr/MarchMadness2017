@@ -44,7 +44,7 @@ public class Teams {
 
         @Override
         public String toString() {
-            return name + "-> Region: " + region + ", Seed: " + seed;
+            return seed + ". " + name;
         }
     }
 

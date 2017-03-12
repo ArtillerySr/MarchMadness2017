@@ -1,5 +1,6 @@
 package MarchMadness;
 
+import MarchMadness.Displays.*;
 import MarchMadness.Tournament.*;
 
 /**
@@ -17,8 +18,11 @@ public class Main {
         }
         Utilities.normalizeMap(Controls.matchupGrid);
         Utilities.normalizeList(Controls.bias);
-        //System.out.println(Controls.matchupGrid.get(1).get(16));
 
-        new Bracket();
+        //Create and play tournament
+        Bracket b = new Bracket();
+        Bracket.BracketContainer bracket = b.getBracket();
+
+        TextBasedDisplay.display(bracket);
     }
 }
