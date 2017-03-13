@@ -30,8 +30,9 @@ public class Matchups {
         @Override
         public String toString() {
             String newLine = System.getProperty("line.separator");
-            return (t1.seed + ". " + t1.name + newLine +
-                    t2.seed + ". " + t2.name        );
+            String t1s = t1.seed >= 10 ? (t1.seed + ". " + t1.name + newLine) : (t1.seed + ".  " + t1.name + newLine);
+            String t2s = t2.seed >= 10 ? (t2.seed + ". " + t2.name) : (t2.seed + ".  " + t2.name);
+            return t1s + t2s;
         }
     }
 

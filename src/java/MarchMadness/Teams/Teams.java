@@ -44,7 +44,8 @@ public class Teams {
 
         @Override
         public String toString() {
-            return seed + ". " + name;
+            String s = seed >= 10 ? seed + ". " + name : seed + ".  " + name;
+            return s;
         }
     }
 
