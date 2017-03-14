@@ -2,8 +2,7 @@
 Generate some brackets or something
 
 ## How to use
-This version has no bias and is based strictly on the win-loss of
-the seeds in previous years.
+###This version has no bias and is based strictly on the win-loss of the seeds in previous years.
 1. Download MarchMadness2017.jar in above main directory
 2. Run to generate a bracket
 3. Go to Finals -> Roll New Bracket to get another output
