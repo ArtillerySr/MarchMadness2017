@@ -12,7 +12,8 @@ public class Teams {
         EAST,
         WEST,
         MIDWEST,
-        SOUTH
+        SOUTH,
+        FINALS
     }
 
     public Teams() {}

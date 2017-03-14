@@ -19,11 +19,19 @@ public class Main {
         Utilities.normalizeMap(Controls.matchupGrid);
         Utilities.normalizeList(Controls.bias);
 
+        playTournament();
+    }
+
+    public static void playTournament() {
         //Create and play tournament
         Bracket b = new Bracket();
         Bracket.BracketContainer bracket = b.getBracket();
 
-        TextBasedDisplay.display(bracket);
-        //GraphicsBasedDisplay.display();
+        //Change the output type in the controls file
+        if(Controls.displayResultsWithGraphics) {
+            new GraphicsBasedDisplay(bracket);
+        } else {
+            new TextBasedDisplay(bracket);
+        }
     }
 }

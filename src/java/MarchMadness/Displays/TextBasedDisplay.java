@@ -8,7 +8,7 @@ import MarchMadness.Teams.Teams.*;
  */
 public class TextBasedDisplay {
 
-    public static void display(Bracket.BracketContainer bracket) {
+    public TextBasedDisplay(Bracket.BracketContainer bracket) {
         printRegion(bracket, Region.EAST);
         printRegion(bracket, Region.WEST);
         printRegion(bracket, Region.MIDWEST);

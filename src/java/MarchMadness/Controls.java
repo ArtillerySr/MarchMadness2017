@@ -19,7 +19,7 @@ public class Controls {
      */
     // Display the results with a graphical JFrame. Change to false if you want results in a text format.
     // See file DisplayText for more details on text format.
-    public static boolean displayResultsWithGraphics = false;
+    public static boolean displayResultsWithGraphics = true;
 
     // Converts matchups (listed below) that have 100% win rate for a given seed to 99%... underdog story?
     // Does not effect bias
